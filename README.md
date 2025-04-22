@@ -40,3 +40,20 @@ if (Get-Command winget -ErrorAction SilentlyContinue) {
 }
 
 Write-Host "`n=== Done. Please RESTART your computer now. ==="
+
+---
+updated 3
+
+# Step 3: Fix permissions on WindowsApps (SAFE method)
+Write-Host "`nResetting permissions on WindowsApps folder..."
+
+# Take ownership first
+takeown /f "C:\Program Files\WindowsApps" /r /d Y
+
+# Grant read/execute to ALL APPLICATION PACKAGES
+icacls "C:\Program Files\WindowsApps" /grant "ALL APPLICATION PACKAGES":(RX) /t
+
+# Restore SYSTEM full control
+icacls "C:\Program Files\WindowsApps" /grant "SYSTEM":(F) /t
+
+Write-Host "Permissions set safely."

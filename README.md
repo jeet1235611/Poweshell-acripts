@@ -1,4 +1,4 @@
-# Poweshell-acripts
+---# Poweshell-acripts
 # Fix-BrokenWindowsApps.ps1
 # Run as Administrator
 
@@ -57,3 +57,19 @@ icacls "C:\Program Files\WindowsApps" /grant "ALL APPLICATION PACKAGES":(RX) /t
 icacls "C:\Program Files\WindowsApps" /grant "SYSTEM":(F) /t
 
 Write-Host "Permissions set safely."
+@@@@@@@
+# Step 3: Take ownership and fix permissions safely
+Write-Host "`nAttempting to take ownership of WindowsApps folder..."
+
+$folder = "C:\Program Files\WindowsApps"
+$user = "$env:USERNAME"
+
+# Take ownership
+icacls "$folder" /setowner "$user" /T /C
+
+# Grant minimal necessary access
+icacls "$folder" /grant "$user":(RX) /T /C
+icacls "$folder" /grant "ALL APPLICATION PACKAGES":(RX) /T /C
+icacls "$folder" /grant SYSTEM:(F) /T /C
+
+Write-Host "Ownership and permissions adjusted. Proceeding..."

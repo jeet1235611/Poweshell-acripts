@@ -1,3 +1,110 @@
+
+What is Windows Backup?
+
+It’s a built-in backup app in Windows 11 (22H2+ and 23H2+).
+
+It lets you back up your files, settings, and apps to the cloud, using OneDrive + your Microsoft account.
+
+It’s designed to make moving to a new PC easy — when you sign in with the same Microsoft account, Windows restores your files and settings automatically.
+
+
+
+---
+
+🔹 What Windows Backup Saves
+
+1. Files & Folders
+
+Desktop
+
+Documents
+
+Pictures
+
+Videos
+
+Music
+(→ These go to OneDrive if enabled.)
+
+
+
+2. App List
+
+It remembers which apps you had installed, so when you sign in on a new PC, the Microsoft Store reinstalls them.
+
+
+
+3. System Settings
+
+Wi-Fi networks & passwords
+
+Accessibility options
+
+Personalization (wallpapers, themes)
+
+Language & keyboard settings
+
+
+
+4. Credentials & Preferences
+
+Microsoft Edge settings, favorites, and passwords (if synced).
+
+Wi-Fi and Bluetooth device pairings.
+
+
+
+
+
+---
+
+🔹 Difference between Windows Backup and OneDrive
+
+Windows Backup = umbrella service (remembers apps, settings, and connects to your OneDrive).
+
+OneDrive = handles the actual file syncing and cloud storage.
+
+So, when you see “Windows Backup” in Start menu, it’s basically a shortcut into your OneDrive + settings backup service.
+
+
+
+---
+
+🔹 How to Check Your Backup
+
+1. Open Windows Backup (search in Start).
+
+
+2. You’ll see toggles for:
+
+OneDrive folder backup (Desktop, Documents, Pictures)
+
+Settings backup
+
+Apps backup
+
+
+
+3. You can manage or restore from there.
+
+
+
+
+---
+
+✅ In your setup with mklink for D:\ → OneDrive, your D: data is already syncing to OneDrive.
+If you also turn on Windows Backup, then:
+
+Files (D: mirrored folders) → sync via OneDrive.
+
+PC settings, apps, preferences → backed up for new device restore.
+
+
+
+$$$$$$$
+
+
+
 Nice 👍 I can clearly see your OneDrive → John - Personal structure with folders like Documents, Downloads, Music, Pictures, Videos, Desktop, etc. — and the green tick / cloud icons show that syncing is already happening.
 
 Now let’s nail Step 2: constant sync between D: drive and OneDrive in a clean way.

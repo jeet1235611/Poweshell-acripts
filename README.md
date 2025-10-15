@@ -1,3 +1,8 @@
+Symbolic link created for C:\Users\noble\John - Personal\D_Documents <<===>> D:\Documents
+Symbolic link created for C:\Users\noble\John - Personal\D_Downloads <<===>> D:\Downloads
+Symbolic link created for C:\Users\noble\John - Personal\D_OneNote <<===>> D:\OneNote
+Symbolic link created for C:\Users\noble\John - Personal\D_Videos <<===>> D:\Videos
+Symbolic link created for C:\Users\noble\John - Personal\D_Pictures <<===>> D:\Pictures
 
 What is Windows Backup?
 
